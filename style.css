@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
-a{
+body {
+    line-height: 1.6;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -23,7 +28,7 @@ a{
     justify-content: center;
 }
 
-img{
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -38,8 +43,7 @@ p {
     letter-spacing: .05rem;
 }
 
-
-.section-title{
+.section-title {
     font-size: 4rem;
     font-weight: 300;
     color: black;
@@ -49,12 +53,11 @@ p {
     text-align: center;
 }
 
-.section-title span{
+.section-title span {
     color: crimson;
 }
 
-
-.cta{
+.cta {
     display: inline-block;
     padding: 10px 30px;
     color: white;
@@ -68,16 +71,23 @@ p {
     transition-property: background-color, color;
 }
 
-.cta:hover{
+.cta:hover {
     color: white;
     background-color: crimson;
 }
 
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
 
+.brand h1 span {
+    color: crimson;
+}
 
 /* Hero Section */
-
-#hero{
+#hero {
     background-image: url('https://github.com/ShaifArfan/one-page-website-html-css-project/blob/master/img/hero-bg.png?raw=true');
     background-size: cover;
     background-position: top center;
@@ -85,7 +95,7 @@ p {
     z-index: 1;
 }
 
-#hero::after{
+#hero::after {
     content: '';
     position: absolute;
     left: 0;
@@ -97,14 +107,14 @@ p {
     z-index: -1;
 }
 
-#hero .hero{
+#hero .hero {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
 }
 
-#hero h1{
+#hero h1 {
     display: block;
     width: fit-content;
     font-size: 4rem;
@@ -114,20 +124,20 @@ p {
     animation-delay: 1s;
 }
 
-#hero h1:nth-child(1){
+#hero h1:nth-child(1) {
     animation-delay: 1s;
 }
 
-#hero h1:nth-child(2){
+#hero h1:nth-child(2) {
     animation-delay: 2s;
 }
 
-#hero h1:nth-child(3){
+#hero h1:nth-child(3) {
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 3s;
 }
 
-#hero h1 span{
+#hero h1 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -138,25 +148,22 @@ p {
     animation-delay: .5s;
 }
 
-#hero h1:nth-child(1) span{
+#hero h1:nth-child(1) span {
     animation-delay: .5s;
 }
 
-#hero h1:nth-child(2) span{
+#hero h1:nth-child(2) span {
     animation-delay: 1.5s;
 }
 
-#hero h1:nth-child(3) span{
+#hero h1:nth-child(3) span {
     animation-delay: 2.5s;
 }
-
 
 /* End Hero Section */
 
 /* Services Section */
-
-
-#services .services{
+#services .services {
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
@@ -164,8 +171,13 @@ p {
     padding: 100px 0;
 }
 
+#services .service-top p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-#services .service-bottom{
+#services .service-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +185,7 @@ p {
     margin-top: 50px;
 }
 
-#services .service-item{
+#services .service-item {
     flex-basis: 80%;
     display: flex;
     align-items: flex-start;
@@ -189,7 +201,7 @@ p {
     overflow: hidden;
 }
 
-#services .service-item::after{
+#services .service-item::after {
     content: '';
     position: absolute;
     left: 0;
@@ -201,48 +213,46 @@ p {
     z-index: -1;
 }
 
-#services .service-bottom .icon{
+#services .service-bottom .icon {
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
 }
 
-#services .service-item h2{
+#services .service-item h2 {
     font-size: 2rem;
     color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-#services .service-item p{
+#services .service-item p {
     color: white;
-    text-align: left; 
+    text-align: left;
 }
-
 
 /* End Services Section */
 
 /* Projects Section */
-
-#projects .projects{
+#projects .projects {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 0;
 }
 
-#projects .projects-header h1{
+#projects .projects-header h1 {
     margin-bottom: 50px;
 }
 
-#projects .all-projects{
+#projects .all-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#projects .project-item{
+#projects .project-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,7 +263,7 @@ p {
     border-radius: 10px;
 }
 
-#projects .project-info{
+#projects .project-info {
     padding: 30px;
     flex-basis: 50%;
     height: 100%;
@@ -265,29 +275,29 @@ p {
     color: white;
 }
 
-#projects .project-info h1{
+#projects .project-info h1 {
     font-size: 4rem;
     font-weight: 500;
 }
 
-#projects .project-info h2{
+#projects .project-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
     margin-top: 10px;
 }
 
-#projects .project-info p{
-    color: white; 
+#projects .project-info p {
+    color: white;
 }
 
-#projects .project-img{
+#projects .project-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
 }
 
-#projects .project-img::after{
+#projects .project-img::after {
     content: '';
     position: absolute;
     left: 0;
@@ -298,20 +308,18 @@ p {
     opacity: .7;
 }
 
-#projects .project-img img{
+#projects .project-img img {
     transition: .3s ease transform;
 }
 
-#projects .project-item:hover .project-img img{
+#projects .project-item:hover .project-img img {
     transform: scale(1.1);
 }
 
 /* End Projects Section */
 
-
 /* About Me section */
-
-#about .about{
+#about .about {
     flex-direction: column-reverse;
     text-align: center;
     max-width: 1200px;
@@ -319,41 +327,41 @@ p {
     padding: 100px 20px;
 }
 
-#about .col-left{
+#about .col-left {
     width: 250px;
     height: 360px;
 }
 
-#about .col-right{
+#about .col-right {
     width: 100%;
 }
 
-#about .col-right h2{
+#about .col-right h2 {
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 10px;
 }
 
-#about .col-right p{
+#about .col-right p {
     margin-bottom: 20px;
 }
 
-#about .col-right .cta{
+#about .col-right .cta {
     color: black;
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: 2rem;
 }
 
-#about .col-left .about-img{
+#about .col-left .about-img {
     height: 100%;
     width: 100%;
     position: relative;
     border: 10px solid white;
 }
 
-#about .col-left .about-img::after{
+#about .col-left .about-img::after {
     content: '';
     position: absolute;
     left: -33px;
@@ -366,20 +374,22 @@ p {
 
 /* End About Me section */
 
-
 /* Contact Info section */
-
-#contact .contact{
+#contact .contact {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 100px 0;
 }
 
-#contact .contact-items{
-    width: 400px;
+#contact .contact-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#contact .contact-item{
+#contact .contact-item {
     width: 80%;
     padding: 20px;
     text-align: center;
@@ -394,23 +404,23 @@ p {
     transition: .3s ease box-shadow;
 }
 
-#contact .contact-item:hover{
+#contact .contact-item:hover {
     box-shadow: 0px 0px 6px 0 #0000002c;
 }
 
-#contact .icon{
+#contact .icon {
     width: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
-#contact .contact-info h1{
+#contact .contact-info h1 {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-#contact .contact-info h2{
+#contact .contact-info h2 {
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 500;
@@ -418,29 +428,387 @@ p {
 
 /* End Contact Info section */
 
-/* Keyframes */
+/* Footer */
+#footer {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
 
-@keyframes text_reveal_box{
-    50%{
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* End Footer */
+
+/* Keyframes */
+@keyframes text_reveal_box {
+    50% {
         width: 100%;
         left: 0;
     }
-    100%{
+
+    100% {
         width: 0;
         left: 100%;
     }
 }
 
-@keyframes text_reveal{
-    100%{
+@keyframes text_reveal {
+    100% {
         color: white;
     }
 }
 
-@keyframes text_reveal_name{
-    100%{
+@keyframes text_reveal_name {
+    100% {
         color: crimson;
         font-weight: 500px;
     }
 }
+
 /* End Keyframes */
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 9px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero .hero {
+        padding: 0 20px;
+    }
+
+    #services .service-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    #projects .project-item {
+        width: 90%;
+    }
+
+    #contact .contact-item {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    #about .col-left .about-img::after {
+        left: -15px;
+        top: 15px;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cta {
+        font-size: 1.8rem;
+        padding: 15px 40px;
+    }
+
+    h1.section-title {
+        font-size: 5rem;
+    }
+
+    /* Hero */
+    #hero h1 {
+        font-size: 5rem;
+    }
+
+    /* Services Section */
+    #services .service-bottom .service-item {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+    /* Project Section */
+    #projects .project-item {
+        flex-direction: row;
+    }
+
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projects .all-projects .project-info {
+        height: 100%;
+    }
+
+    #projects .all-projects .project-img {
+        height: 100%;
+    }
+
+    /* About Me Section */
+    #about .about {
+        flex-direction: row;
+    }
+
+    #about .col-left {
+        width: 400px;
+        height: 500px;
+        padding-left: 40px;
+    }
+
+    #about .about .col-left .about-img::after {
+        left: -30px;
+        top: 30px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+    }
+
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+
+    #about .col-right h1 {
+        text-align: left;
+    }
+
+    /* Contact section */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    #contact .contact-item {
+        margin: 20px;
+        flex-direction: row;
+        flex: 1 1 300px;
+    }
+
+    #contact .contact-item .icon {
+        height: 80px;
+        width: 80px;
+    }
+
+    #contact .contact-item .icon img {
+        object-fit: contain;
+    }
+
+    #contact .contact-item .contact-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+/* Desktop (1024px and above) */
+@media only screen and (min-width: 1024px) {
+    .cta {
+        font-size: 2rem;
+        padding: 20px 60px;
+    }
+
+    h1.section-title {
+        font-size: 6rem;
+    }
+
+    /* Hero */
+    #hero h1 {
+        font-size: 7rem;
+    }
+
+    /* Services Section */
+    #services .service-bottom .service-item {
+        flex-basis: 22%;
+        margin: 1.5%;
+    }
+
+    /* Project Section */
+    #projects .project-item {
+        flex-direction: row;
+    }
+
+    #projects .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projects .project-item {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projects .all-projects .project-info {
+        height: 100%;
+    }
+
+    #projects .all-projects .project-img {
+        height: 100%;
+    }
+
+    /* About Me Section */
+    #about .about {
+        flex-direction: row;
+    }
+
+    #about .col-left {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #about .about .col-left .about-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+    }
+
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+
+    #about .col-right h1 {
+        text-align: left;
+    }
+
+    /* Contact section */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+
+    #contact .contact-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #contact .contact-item {
+        margin: 20px;
+        flex-direction: row;
+        flex: 1;
+    }
+
+    #contact .contact-item .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact .contact-item .icon img {
+        object-fit: contain;
+    }
+
+    #contact .contact-item .contact-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+/* Extra Small Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero .hero {
+        padding: 0 10px;
+    }
+
+    #services .services,
+    #projects .projects,
+    #about .about,
+    #contact .contact {
+        padding: 50px 0;
+    }
+
+    #about .col-left {
+        width: 200px;
+        height: 280px;
+    }
+
+    #about .col-left .about-img::after {
+        left: -10px;
+        top: 10px;
+        border-width: 5px;
+    }
+
+    #footer .social-icon {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
